@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --env development",
-    "build":"webpack --env production",
+    "build": "webpack --env production",
     "serv": "static build"
   },
   "author": "",
@@ -17,6 +17,7 @@
     "pug": "^2.0.0-rc.4",
     "pug-loader": "^2.3.0",
     "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.9.1"
+    "webpack-dev-server": "^2.9.1",
+    "webpack-merge": "^4.1.0"
   }
 }
