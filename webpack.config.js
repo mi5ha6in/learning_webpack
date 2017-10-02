@@ -7,7 +7,8 @@ const devserver = require('./webpack/devserver');
 const sass = require('./webpack/sass');
 const css = require('./webpack/css');
 const extractCSS = require('./webpack/css.extract');
-const uglifyJS = require('./webpack/js.uglify')
+const uglifyJS = require('./webpack/js.uglify');
+const images = require('./webpack/images');
 
 const PATHS = {
     source: path.join(__dirname, 'source'),
@@ -40,11 +41,13 @@ const common = merge([
             }),
             new webpack.ProvidePlugin({
                 $: 'jquery',
-                jQuery: 'jquery'
+                jQuery: 'jquery',
+
             })
         ]
     },
-    pug()
+    pug(),
+    images()
 ]);
 
 module.exports = function(env) {
